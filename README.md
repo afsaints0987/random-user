@@ -6,7 +6,7 @@
 <p>To get start with the project, follow these steps:<p>
   
 <h4>Clone the Repository</h4>
-<code>git clone <repository-link></code>
+<code>git clone repository-link</code>
 
 <h4>Open the folder directory of the project</h4>
   <code>cd random-user</code>
