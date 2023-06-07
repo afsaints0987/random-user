@@ -11,4 +11,10 @@
 <h4>Open the folder directory of the project</h4>
   <code>cd random-user</code>
   
+<h4>Install the dependencies<h4>
+  <code>npm install</code>
+  
+  <h4>Run the code</h4>
+  <code>npm run dev</code>
+  
 
