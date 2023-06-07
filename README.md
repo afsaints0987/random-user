@@ -1,5 +1,5 @@
 # random-user
-<h1>Random User</h1>
+
 <p>This project fetches data from the API using axios</p>
 
 <h2>Getting Started</h2>
