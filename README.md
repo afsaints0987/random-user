@@ -25,10 +25,9 @@
   <code>npm install</code>
   </li>
 
-    <li>
-    <h4>Run the code</h4>
+  <li>
+  <h4>Run the code</h4>
   <code>npm run dev</code>
-    </li>
-  
-  </ol>
+  </li>
+</ol>
 
