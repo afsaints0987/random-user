@@ -29,29 +29,34 @@ const UserInfo: React.FC = () => {
   }, []);
 
   // Refresh the Component and Change the User Display
-  const handleRefresh = () => {
+  const handleRefresh = useCallback(() => {
     fetchUser();
-  };
+  }, []);
 
-  // Initially display the data
-  useCallback(() => {
-    fetchUser()
-  },[])
-  
+
+  // Destructuring the object to assign a new variable
+  let fullName, email, image;
+  if(user){
+    const {name: {first, last}, email: userEmail, picture: {medium}} = user
+    fullName = `${first} ${last}`
+    image = medium
+    email = userEmail
+  }
+
   return (
     <div className="d-flex justify-content-center flex-column align-items-center mx-auto vh-100 text-center">
       <h1>Random.User</h1>
       {user && (
         <div>
           <img
-            src={user.picture?.medium}
-            alt={user.name?.first}
+            src={image}
+            alt={fullName}
             className="rounded-circle thumbnail my-2"
           />
           <h3>
-            {user.name?.first} {user.name?.last}
+            {fullName}
           </h3>
-          <p>{user.email}</p>
+          <p>{email}</p>
         </div>
       )}
       <button className="btn btn-outline-primary" onClick={handleRefresh}>
